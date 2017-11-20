@@ -1,3 +1,4 @@
+import '../css/style.css'
 import foo from './module'
 
 foo.sayHello(foo.name).then((value) => {
