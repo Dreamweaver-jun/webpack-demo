@@ -72,9 +72,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__module__ = __webpack_require__(1);
 
 
-__WEBPACK_IMPORTED_MODULE_0__module__["a" /* default */].sayHello(__WEBPACK_IMPORTED_MODULE_0__module__["a" /* default */].name).then((value) => {
+__WEBPACK_IMPORTED_MODULE_0__module__["a" /* default */].sayHello(__WEBPACK_IMPORTED_MODULE_0__module__["a" /* default */].name).then(value => {
     console.log(value);
-}).catch((msg) => {
+}).catch(msg => {
     console.error(msg);
 });
 
@@ -84,11 +84,11 @@ __WEBPACK_IMPORTED_MODULE_0__module__["a" /* default */].sayHello(__WEBPACK_IMPO
 
 "use strict";
 /* harmony default export */ __webpack_exports__["a"] = ({
-    name : 'zyj',
-    sayHello(x){
-        return new Promise((resolve,reject) => {
-            reject('出错啦！');           //如果这里reject，将不会执行下面的resolve。
-            resolve(x+',hello!');
+    name: 'zyj',
+    sayHello(x) {
+        return new Promise((resolve, reject) => {
+            reject('出错啦！'); //如果这里reject，将不会执行下面的resolve。
+            resolve(x + ',hello!');
         });
     }
 });
