@@ -1,5 +1,19 @@
-$color : green;
+$color : pink;
+
+@mixin hack($property,$value...){
+  #{$property}: $value;
+  -moz-#{$property}: $value;
+  -o-#{$property}: $value;
+  -webkit-#{$property}: $value;
+}
+
 
 .box {
+  position: absolute;
+  left: 10px;
   color: $color;
+  @include hack(transition,left .5s);
+  &:hover {
+    left: 30px;
+  }
 }
