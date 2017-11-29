@@ -1,6 +1,8 @@
 import '../css/style.scss'
 import foo from './module'
 
+import '../js/rem'
+
 foo.sayHello(foo.name).then((value) => {
     console.log(value);
 }).catch((msg) => {

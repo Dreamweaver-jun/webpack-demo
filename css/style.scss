@@ -7,13 +7,54 @@ $color : pink;
   -webkit-#{$property}: $value;
 }
 
+/** rem to px & px to rem START **/
+
+@function strip-units($number){
+  @return $number / 75;
+  //@return $number / ($number * 0 + 1);
+}
+
+
+@mixin remCalc($property, $values...){
+  $max: length($values);
+  $pxValues: '';
+  $remValues: '';
+
+  @for $i from 1 through $max {
+    $value: strip-units(nth($values, $i));
+    //$browser-default-font-size: strip-units($browser-default-font-size);
+    $pxValues: #{$pxValues + $value * 75}px;
+
+    @if $i < $max {
+      $pxValues: #{$pxValues + " "};
+    }
+  }
+
+
+  @for $i from 1 through $max {
+    $value: strip-units(nth($values, $i));
+    $remValues: #{$remValues + $value}rem;
+
+    @if $i < $max {
+      $remValues: #{$remValues + " "};
+    }
+  }
+
+  //#{$property}: $pxValues;
+  #{$property}: $remValues;
+}
+
+
+/** rem to px & px to rem END **/
+
+
 
 .box {
   position: absolute;
-  left: 10px;
   color: $color;
+  @include remCalc(left,10);
   @include hack(transition,left .5s);
   &:hover {
-    left: 30px;
+    @include remCalc(left,20);
   }
 }
