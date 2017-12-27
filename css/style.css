@@ -4,6 +4,7 @@
   position: absolute;
   color: pink;
   left: 0.1333333333rem;
+  margin: 0.6666666667rem auto;
   transition: left 0.5s;
   -moz-transition: left 0.5s;
   -o-transition: left 0.5s;

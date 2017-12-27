@@ -129,7 +129,7 @@ exports = module.exports = __webpack_require__(3)(undefined);
 
 
 // module
-exports.push([module.i, "/** rem to px & px to rem START **/\n/** rem to px & px to rem END **/\n.box {\n  position: absolute;\n  color: pink;\n  left: 0.13333rem;\n  transition: left 0.5s;\n  -moz-transition: left 0.5s;\n  -o-transition: left 0.5s;\n  -webkit-transition: left 0.5s; }\n  .box:hover {\n    left: 0.26667rem; }\n", ""]);
+exports.push([module.i, "/** rem to px & px to rem START **/\n/** rem to px & px to rem END **/\n.box {\n  position: absolute;\n  color: pink;\n  left: 0.13333rem;\n  margin: 0.66667rem auto;\n  transition: left 0.5s;\n  -moz-transition: left 0.5s;\n  -o-transition: left 0.5s;\n  -webkit-transition: left 0.5s; }\n  .box:hover {\n    left: 0.26667rem; }\n", ""]);
 
 // exports
 

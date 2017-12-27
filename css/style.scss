@@ -12,7 +12,14 @@ $color : pink;
 /** rem to px & px to rem START **/
 
 @function strip-units($number){
-  @return $number / 75;
+  @if type-of($number) == number
+  {
+    @return $number / 75;
+  }
+  @else
+  {
+    @return $number;
+  }
   //@return $number / ($number * 0 + 1);
 }
 
@@ -25,7 +32,7 @@ $color : pink;
   @for $i from 1 through $max {
     $value: strip-units(nth($values, $i));
     //$browser-default-font-size: strip-units($browser-default-font-size);
-    $pxValues: #{$pxValues + $value * 75}px;
+    //$pxValues: #{$pxValues + $value * 75}px;
 
     @if $i < $max {
       $pxValues: #{$pxValues + " "};
@@ -35,10 +42,19 @@ $color : pink;
 
   @for $i from 1 through $max {
     $value: strip-units(nth($values, $i));
-    $remValues: #{$remValues + $value}rem;
-
-    @if $i < $max {
-      $remValues: #{$remValues + " "};
+    @if type-of($value) == number
+    {
+      $remValues: #{$remValues + $value}rem;
+      @if $i < $max {
+        $remValues: #{$remValues + " "};
+      }
+    }
+    @else
+    {
+      $remValues: #{$remValues + $value};
+      @if $i < $max {
+        $remValues: #{$remValues + " "};
+      }
     }
   }
 
@@ -55,6 +71,7 @@ $color : pink;
   position: absolute;
   color: $color;
   @include remCalc(left,10);
+  @include remCalc(margin,50,auto);
   @include hack(transition,left .5s);
   &:hover {
     @include remCalc(left,20);
