@@ -683,6 +683,13 @@ module.exports = function (css) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+layui.use(['layer', 'form'], function () {
+    let layer = layui.layer,
+        form = layui.form;
+
+    layer.msg('试一试用layer咯！');
+});
+
 /* harmony default export */ __webpack_exports__["a"] = ({
     name: 'zyj',
     sayHello(x) {

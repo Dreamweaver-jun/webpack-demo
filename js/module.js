@@ -1,3 +1,10 @@
+layui.use(['layer', 'form'], function(){
+    let layer = layui.layer
+        ,form = layui.form;
+
+    layer.msg('试一试用layer咯！');
+});
+
 export default {
     name : 'zyj',
     sayHello(x){
@@ -53,4 +60,3 @@ export default {
 
     }
 }
-
