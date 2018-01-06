@@ -71,23 +71,12 @@
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_style_scss__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__css_style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__css_style_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__module__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__js_rem__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__js_rem___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__js_rem__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__js_rem__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__js_rem___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__js_rem__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__js_index__ = __webpack_require__(8);
 
 
 
-
-
-__WEBPACK_IMPORTED_MODULE_1__module__["a" /* default */].sayHello(__WEBPACK_IMPORTED_MODULE_1__module__["a" /* default */].name).then(value => {
-    console.log(value);
-}).catch(msg => {
-    console.error(msg);
-});
-
-__WEBPACK_IMPORTED_MODULE_1__module__["a" /* default */].http('get', 'package.json', { test: 123 }).then(response => {
-    console.log(response);
-});
 
 /***/ }),
 /* 1 */
@@ -866,6 +855,24 @@ layui.use(['layer', 'form'], function () {
         return val;
     };
 })(window, window['lib'] || (window['lib'] = {}));
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__module__ = __webpack_require__(6);
+
+
+__WEBPACK_IMPORTED_MODULE_0__module__["a" /* default */].sayHello(__WEBPACK_IMPORTED_MODULE_0__module__["a" /* default */].name).then(value => {
+    console.log(value);
+}).catch(msg => {
+    console.error(msg);
+});
+
+__WEBPACK_IMPORTED_MODULE_0__module__["a" /* default */].http('get', 'package.json', { test: 123 }).then(response => {
+    console.log(response);
+});
 
 /***/ })
 /******/ ]);

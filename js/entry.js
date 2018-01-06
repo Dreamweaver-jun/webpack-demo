@@ -1,14 +1,3 @@
 import '../css/style.scss'
-import foo from './module'
-
 import '../js/rem'
-
-foo.sayHello(foo.name).then((value) => {
-    console.log(value);
-}).catch((msg) => {
-    console.error(msg);
-});
-
-foo.http('get','package.json',{test:123}).then((response) =>{
-    console.log(response);
-});
+import '../js/index'
